@@ -1,6 +1,13 @@
+import { useState } from "react";
 import "./index.css";
 
 const Intro = () => {
+  const [value, setValue] = useState(1);
+
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setValue(parseInt(event.target.value));
+  };
+
   return (
     <div className="first-section">
       <h3 className="first-section__title">calc</h3>
@@ -17,6 +24,8 @@ const Intro = () => {
             type="range"
             min="1"
             max="3"
+            value={value}
+            onInput={handleInputChange}
           />
         </div>
       </div>
