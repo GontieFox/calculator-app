@@ -1,0 +1,19 @@
+@import "./../../assets/colors/index.scss";
+
+.background-result {
+    background-color: $very-dark-desaturated-blue-screen;
+    width: 500px;
+    height: 110px;
+    margin: 20px 0;
+    border-radius: 10px;
+    position: relative;
+}
+
+.result {
+    color: $white;
+    font-size: 40px;
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translate(0, -50%);
+}
