@@ -1,0 +1,60 @@
+@import "./../../assets/colors/index.scss";
+
+.switcher {
+    display: block;
+    position: relative;
+    bottom: 10px;
+
+    &__section {
+        display: flex;
+        width: 55px;
+        margin-left: 5px;
+        margin-bottom: 5px;
+        justify-content: space-between;
+    }
+
+    &__number {
+        color: $white;
+        font-size: 14px;
+    }
+
+    &__range {
+        -webkit-appearance: none;
+        width: 55px;
+        height: 24px;
+        background-color: $very-dark-desaturated-blue-toggle;
+        border-radius: 40px;
+        outline: none;
+        padding: 0 5px;
+
+        &::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 14px;
+            height: 14px;
+            background-color: $red;
+            border-radius: 50%;
+            border: none;
+            position: relative;
+            top: 0;
+            left: 0;
+            transition: background-color 0.2s ease-in-out;
+            cursor: pointer;
+        }
+
+        &[value="2"]::-webkit-slider-thumb {
+            background-color: $orange;
+        }
+
+        &[value="3"]::-webkit-slider-thumb {
+            background-color: $pure-cyan;
+        }
+
+        &[value="2"] {
+            background-color: $grayish-red;
+        }
+
+        &[value="3"] {
+            background-color: $very-dark-violet-toggle;
+        }
+    }
+}
