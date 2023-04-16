@@ -1,0 +1,82 @@
+@import "./../../assets/colors/index.scss";
+
+.card {
+    background-color: $very-dark-desaturated-blue-toggle;
+    width: 440px;
+    height: 340px;
+    border-radius: 10px;
+    padding: 30px;
+
+    &__first-section {
+        display: grid;
+        grid-template-columns: repeat(4, 95px);
+        gap: 20px;
+    }
+
+    &__second-section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    &__btn {
+        font-size: 32px;
+        color: $very-dark-grayish-blue;
+        background-color: $light-grayish-orange;
+        box-shadow: 0 3px 0 0 $grayish-orange;
+        transition: all 0.2s ease-in;
+
+        &:hover {
+            background-color: $light-grayish-orange-hover;
+        }
+    }
+
+    &__delete-btn {
+        font-size: 24px;
+        color: $white;
+        background-color: $desaturated-dark-blue-key-bg;
+        box-shadow: 0 3px 0 0 $desaturated-dark-blue-key-shadow;
+        transition: all 0.2s ease-in;
+
+        &:hover {
+            background-color: $desaturated-dark-blue-key-bg-hover;
+        }
+    }
+
+    &__reset-btn {
+        font-size: 24px;
+        color: $white;
+        background-color: $desaturated-dark-blue-key-bg;
+        box-shadow: 0 3px 0 0 $desaturated-dark-blue-key-shadow;
+        transition: all 0.2s ease-in;
+
+        &:hover {
+            background-color: $desaturated-dark-blue-key-bg-hover;
+        }
+    }
+
+    &__result-btn {
+        font-size: 24px;
+        color: $white;
+        background-color: $red;
+        box-shadow: 0 3px 0 0 $dark-red;
+        transition: all 0.2s ease-in;
+
+        &:hover {
+            background-color: $red-hover;
+        }
+    }
+}
+
+.button {
+    font-weight: bold;
+    font-family: 'League Spartan', sans-serif;
+    border: none;
+    border-radius: 10px;
+    height: 50px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
