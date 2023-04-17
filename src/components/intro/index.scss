@@ -6,8 +6,20 @@
     justify-content: space-between;
 
     &__title {
-        color: $white;
         font-size: 28px;
+        transition: all 0.2s ease-in;
+
+        &_first {
+            color: $white;
+        }
+
+        &_second {
+            color: $very-dark-grayish-yellow;
+        }
+
+        &_third {
+            color: $light-yellow;
+        }
     }
 
     &__theme {
@@ -18,8 +30,20 @@
     }
 
     &__span {
-        color: $white;
         text-transform: uppercase;
         font-size: 12px;
+        transition: all 0.2s ease-in;
+
+        &_first {
+            color: $white;
+        }
+
+        &_second {
+            color: $very-dark-grayish-yellow;
+        }
+
+        &_third {
+            color: $light-yellow;
+        }
     }
 }

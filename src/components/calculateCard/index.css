@@ -1,9 +1,18 @@
 .card {
-  background-color: hsl(223, 31%, 20%);
   width: 440px;
   height: 340px;
   border-radius: 10px;
   padding: 30px;
+  transition: all 0.2s ease-in;
+}
+.card_first {
+  background-color: hsl(223, 31%, 20%);
+}
+.card_second {
+  background-color: hsl(0, 5%, 81%);
+}
+.card_third {
+  background-color: hsl(268, 71%, 12%);
 }
 .card__first-section {
   display: grid;
@@ -18,43 +27,115 @@
 }
 .card__btn {
   font-size: 32px;
+  transition: all 0.2s ease-in;
+}
+.card__btn_first {
   color: hsl(221, 14%, 31%);
   background-color: hsl(30, 25%, 89%);
   box-shadow: 0 3px 0 0 hsl(28, 16%, 65%);
-  transition: all 0.2s ease-in;
 }
-.card__btn:hover {
+.card__btn_first:hover {
   background-color: hsl(0, 29%, 97%);
+}
+.card__btn_second {
+  color: hsl(60, 10%, 19%);
+  background-color: hsl(45, 7%, 89%);
+  box-shadow: 0 3px 0 0 hsl(35, 11%, 61%);
+}
+.card__btn_second:hover {
+  background-color: hsl(45, 17%, 95%);
+}
+.card__btn_third {
+  color: hsl(52, 100%, 62%);
+  background-color: hsl(268, 47%, 21%);
+  box-shadow: 0 3px 0 0 hsl(290, 70%, 36%);
+}
+.card__btn_third:hover {
+  background-color: hsl(268, 43%, 41%);
 }
 .card__delete-btn {
   font-size: 24px;
+  transition: all 0.2s ease-in;
+}
+.card__delete-btn_first {
   color: hsl(0, 0%, 100%);
   background-color: hsl(225, 21%, 49%);
   box-shadow: 0 3px 0 0 hsl(224, 28%, 35%);
-  transition: all 0.2s ease-in;
 }
-.card__delete-btn:hover {
+.card__delete-btn_first:hover {
   background-color: hsl(224, 50%, 75%);
+}
+.card__delete-btn_second {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(185, 42%, 37%);
+  box-shadow: 0 3px 0 0 hsl(185, 58%, 25%);
+}
+.card__delete-btn_second:hover {
+  background-color: hsl(185, 49%, 57%);
+}
+.card__delete-btn_third {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(281, 89%, 26%);
+  box-shadow: 0 3px 0 0 hsl(285, 91%, 52%);
+}
+.card__delete-btn_third:hover {
+  background-color: hsl(281, 80%, 44%);
 }
 .card__reset-btn {
   font-size: 24px;
+  transition: all 0.2s ease-in;
+}
+.card__reset-btn_first {
   color: hsl(0, 0%, 100%);
   background-color: hsl(225, 21%, 49%);
   box-shadow: 0 3px 0 0 hsl(224, 28%, 35%);
-  transition: all 0.2s ease-in;
 }
-.card__reset-btn:hover {
+.card__reset-btn_first:hover {
   background-color: hsl(224, 50%, 75%);
+}
+.card__reset-btn_second {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(185, 42%, 37%);
+  box-shadow: 0 3px 0 0 hsl(185, 58%, 25%);
+}
+.card__reset-btn_second:hover {
+  background-color: hsl(185, 49%, 57%);
+}
+.card__reset-btn_third {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(281, 89%, 26%);
+  box-shadow: 0 3px 0 0 hsl(285, 91%, 52%);
+}
+.card__reset-btn_third:hover {
+  background-color: hsl(281, 80%, 44%);
 }
 .card__result-btn {
   font-size: 24px;
+  transition: all 0.2s ease-in;
+}
+.card__result-btn_first {
   color: hsl(0, 0%, 100%);
   background-color: hsl(6, 63%, 50%);
   box-shadow: 0 3px 0 0 hsl(6, 70%, 34%);
-  transition: all 0.2s ease-in;
 }
-.card__result-btn:hover {
+.card__result-btn_first:hover {
   background-color: hsl(6, 90%, 63%);
+}
+.card__result-btn_second {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(25, 98%, 40%);
+  box-shadow: 0 3px 0 0 hsl(25, 99%, 27%);
+}
+.card__result-btn_second:hover {
+  background-color: hsl(25, 84%, 51%);
+}
+.card__result-btn_third {
+  color: hsl(198, 20%, 13%);
+  background-color: hsl(176, 100%, 44%);
+  box-shadow: 0 3px 0 0 hsl(177, 92%, 70%);
+}
+.card__result-btn_third:hover {
+  background-color: hsl(176, 95%, 62%);
 }
 
 .button {

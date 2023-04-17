@@ -1,9 +1,18 @@
 .background {
-  background-color: hsl(222, 26%, 31%);
   width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: all 0.2s ease-in;
+}
+.background_first {
+  background-color: hsl(222, 26%, 31%);
+}
+.background_second {
+  background-color: hsl(0, 0%, 90%);
+}
+.background_third {
+  background-color: hsl(268, 75%, 9%);
 }/*# sourceMappingURL=index.css.map */

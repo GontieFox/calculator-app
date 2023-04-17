@@ -1,19 +1,43 @@
 @import "./../../assets/colors/index.scss";
 
 .background-result {
-    background-color: $very-dark-desaturated-blue-screen;
     width: 500px;
     height: 100px;
     margin: 20px 0;
     border-radius: 10px;
     position: relative;
+    transition: all 0.2s ease-in;
+
+    &_first {
+        background-color: $very-dark-desaturated-blue-screen;
+    }
+
+    &_second {
+        background-color: $very-light-gray;
+    }
+
+    &_third {
+        background-color: $very-dark-violet-toggle;
+    }
 }
 
 .result {
-    color: $white;
     font-size: 40px;
     position: absolute;
     right: 30px;
     top: 50%;
     transform: translate(0, -50%);
+    transition: all 0.2s ease-in;
+
+    &_first {
+        color: $white;
+    }
+
+    &_second {
+        color: $very-dark-grayish-yellow;
+    }
+
+    &_third {
+        color: $light-yellow;
+    }
 }

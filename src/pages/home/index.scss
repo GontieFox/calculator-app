@@ -1,11 +1,23 @@
 @import "./../../assets/colors/index.scss";
 
 .background {
-    background-color: $very-dark-desaturated-blue-main;
     width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: all 0.2s ease-in;
+
+    &_first {
+        background-color: $very-dark-desaturated-blue-main;
+    }
+
+    &_second {
+        background-color: $light-gray-main;
+    }
+
+    &_third {
+        background-color: $very-dark-violet-main;
+    }
 }

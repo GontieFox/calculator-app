@@ -11,12 +11,26 @@ const ThemeSwitcher = () => {
     dispatch(changeTheme(parseInt(event.target.value)));
   };
 
+  let number = "";
+
+  switch (theme) {
+    case 1:
+      number = "switcher__number_first";
+      break;
+    case 2:
+      number = "switcher__number_second";
+      break;
+    case 3:
+      number = "switcher__number_third";
+      break;
+  }
+
   return (
     <div className="switcher">
       <div className="switcher__section">
-        <span className="switcher__number">1</span>
-        <span className="switcher__number">2</span>
-        <span className="switcher__number">3</span>
+        <span className={`switcher__number ${number}`}>1</span>
+        <span className={`switcher__number ${number}`}>2</span>
+        <span className={`switcher__number ${number}`}>3</span>
       </div>
       <input
         className="switcher__range"

@@ -1,11 +1,23 @@
 @import "./../../assets/colors/index.scss";
 
 .card {
-    background-color: $very-dark-desaturated-blue-toggle;
     width: 440px;
     height: 340px;
     border-radius: 10px;
     padding: 30px;
+    transition: all 0.2s ease-in;
+
+    &_first {
+        background-color: $very-dark-desaturated-blue-toggle;
+    }
+
+    &_second {
+        background-color: $grayish-red;
+    }
+
+    &_third {
+        background-color: $very-dark-violet-toggle;
+    }
 
     &__first-section {
         display: grid;
@@ -22,50 +34,144 @@
 
     &__btn {
         font-size: 32px;
-        color: $very-dark-grayish-blue;
-        background-color: $light-grayish-orange;
-        box-shadow: 0 3px 0 0 $grayish-orange;
         transition: all 0.2s ease-in;
 
-        &:hover {
-            background-color: $light-grayish-orange-hover;
+        &_first {
+            color: $very-dark-grayish-blue;
+            background-color: $light-grayish-orange;
+            box-shadow: 0 3px 0 0 $grayish-orange;
+
+            &:hover {
+                background-color: $light-grayish-orange-hover;
+            }
+        }
+
+        &_second {
+            color: $very-dark-grayish-yellow;
+            background-color: $light-grayish-yellow;
+            box-shadow: 0 3px 0 0 $dark-grayish-orange;
+
+            &:hover {
+                background-color: $light-grayish-yellow-hover;
+            }
+        }
+
+        &_third {
+            color: $light-yellow;
+            background-color: $very-dark-violet;
+            box-shadow: 0 3px 0 0 $dark-magenta;
+
+            &:hover {
+                background-color: $very-dark-violet-hover;
+            }
         }
     }
 
     &__delete-btn {
         font-size: 24px;
-        color: $white;
-        background-color: $desaturated-dark-blue-key-bg;
-        box-shadow: 0 3px 0 0 $desaturated-dark-blue-key-shadow;
         transition: all 0.2s ease-in;
 
-        &:hover {
-            background-color: $desaturated-dark-blue-key-bg-hover;
+        &_first {
+            color: $white;
+            background-color: $desaturated-dark-blue-key-bg;
+            box-shadow: 0 3px 0 0 $desaturated-dark-blue-key-shadow;
+
+            &:hover {
+                background-color: $desaturated-dark-blue-key-bg-hover;
+            }
+        }
+
+        &_second {
+            color: $white;
+            background-color: $dark-moderate-cyan;
+            box-shadow: 0 3px 0 0 $very-dark-cyan;
+
+            &:hover {
+                background-color: $dark-moderate-cyan-hover;
+            }
+        }
+
+        &_third {
+            color: $white;
+            background-color: $dark-violet;
+            box-shadow: 0 3px 0 0 $vivid-magenta;
+
+            &:hover {
+                background-color: $dark-violet-hover;
+            }
         }
     }
 
     &__reset-btn {
         font-size: 24px;
-        color: $white;
-        background-color: $desaturated-dark-blue-key-bg;
-        box-shadow: 0 3px 0 0 $desaturated-dark-blue-key-shadow;
         transition: all 0.2s ease-in;
 
-        &:hover {
-            background-color: $desaturated-dark-blue-key-bg-hover;
+        &_first {
+            color: $white;
+            background-color: $desaturated-dark-blue-key-bg;
+            box-shadow: 0 3px 0 0 $desaturated-dark-blue-key-shadow;
+
+            &:hover {
+                background-color: $desaturated-dark-blue-key-bg-hover;
+            }
+        }
+
+        &_second {
+            color: $white;
+            background-color: $dark-moderate-cyan;
+            box-shadow: 0 3px 0 0 $very-dark-cyan;
+
+            &:hover {
+                background-color: $dark-moderate-cyan-hover;
+            }
+        }
+
+        &_third {
+            color: $white;
+            background-color: $dark-violet;
+            box-shadow: 0 3px 0 0 $vivid-magenta;
+
+            &:hover {
+                background-color: $dark-violet-hover;
+            }
         }
     }
 
     &__result-btn {
         font-size: 24px;
-        color: $white;
-        background-color: $red;
-        box-shadow: 0 3px 0 0 $dark-red;
         transition: all 0.2s ease-in;
 
-        &:hover {
-            background-color: $red-hover;
+        &_first {
+            color: $white;
+            background-color: $red;
+            box-shadow: 0 3px 0 0 $dark-red;
+
+            &:hover {
+                background-color: $red-hover;
+            }
         }
+
+        &_second {
+            color: $white;
+            background-color: $orange;
+            box-shadow: 0 3px 0 0 $dark-orange;
+
+            &:hover {
+                background-color: $orange-hover;
+            }
+        }
+
+        &_third {
+            color: $very-dark-blue;
+            background-color: $pure-cyan;
+            box-shadow: 0 3px 0 0 $soft-cyan;
+
+            &:hover {
+                background-color: $pure-cyan-hover;
+            }
+        }
+
+
     }
 }
 

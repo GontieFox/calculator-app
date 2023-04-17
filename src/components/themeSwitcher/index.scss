@@ -14,8 +14,20 @@
     }
 
     &__number {
-        color: $white;
         font-size: 14px;
+        transition: all 0.2s ease-in;
+
+        &_first {
+            color: $white;
+        }
+
+        &_second {
+            color: $very-dark-grayish-yellow;
+        }
+
+        &_third {
+            color: $light-yellow;
+        }
     }
 
     &__range {
@@ -37,7 +49,7 @@
             position: relative;
             top: 0;
             left: 0;
-            transition: background-color 0.2s ease-in-out;
+            transition: background-color 0.2s ease-in;
             cursor: pointer;
         }
 
