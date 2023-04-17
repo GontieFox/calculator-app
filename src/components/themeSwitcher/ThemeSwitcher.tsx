@@ -1,11 +1,14 @@
-import { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { changeTheme } from "../../redux/reducers/themeSlice";
+import { RootState } from "../../redux/store";
 import "./index.css";
 
 const ThemeSwitcher = () => {
-  const [value, setValue] = useState(1);
+  const theme = useSelector((state: RootState) => state.theme.theme);
+  const dispatch = useDispatch();
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setValue(parseInt(event.target.value));
+    dispatch(changeTheme(parseInt(event.target.value)));
   };
 
   return (
@@ -20,7 +23,7 @@ const ThemeSwitcher = () => {
         type="range"
         min="1"
         max="3"
-        value={value}
+        value={theme}
         onInput={handleInputChange}
       />
     </div>
