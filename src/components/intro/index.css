@@ -35,4 +35,10 @@
 }
 .first-section__span_third {
   color: hsl(52, 100%, 62%);
+}
+
+@media (max-width: 580px) {
+  .first-section {
+    width: 90%;
+  }
 }/*# sourceMappingURL=index.css.map */

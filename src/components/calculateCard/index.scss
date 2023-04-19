@@ -228,3 +228,44 @@
         cursor: pointer;
     }
 }
+
+@media (max-width: 580px) {
+    .background-result {
+        width: 90%;
+    }
+
+    .card {
+        width: 90%;
+        height: 420px;
+        padding: 0;
+
+        &__first-section {
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            padding: 20px;
+        }
+
+        &__second-section {
+            gap: 15px;
+            margin-top: 5px;
+            padding: 0 20px;
+        }
+
+        &__btn {
+            height: 60px;
+        }
+
+        &__delete-btn {
+            height: 60px;
+        }
+
+        &__reset-btn {
+            height: 70px;
+        }
+
+        &__result-btn {
+            height: 70px;
+        }
+    }
+
+}

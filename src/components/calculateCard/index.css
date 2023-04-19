@@ -183,4 +183,37 @@
 }
 .button:hover {
   cursor: pointer;
+}
+
+@media (max-width: 580px) {
+  .background-result {
+    width: 90%;
+  }
+  .card {
+    width: 90%;
+    height: 420px;
+    padding: 0;
+  }
+  .card__first-section {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    padding: 20px;
+  }
+  .card__second-section {
+    gap: 15px;
+    margin-top: 5px;
+    padding: 0 20px;
+  }
+  .card__btn {
+    height: 60px;
+  }
+  .card__delete-btn {
+    height: 60px;
+  }
+  .card__reset-btn {
+    height: 70px;
+  }
+  .card__result-btn {
+    height: 70px;
+  }
 }/*# sourceMappingURL=index.css.map */
