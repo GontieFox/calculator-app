@@ -1,9 +1,23 @@
 import { useSelector } from "react-redux";
+import { useState } from "react";
 import { RootState } from "../../redux/store";
 import "./index.css";
 
 const CalculateCard = () => {
   const theme = useSelector((state: RootState) => state.theme.theme);
+  const [calcValue, setCalcValue] = useState("0");
+
+  const handleButtonClick = (value: string) => {
+    if (value === "DEL") {
+      setCalcValue(calcValue.slice(0, -1));
+    } else if (value === "RESET") {
+      setCalcValue("0");
+    } else if (value === "=") {
+      setCalcValue(eval(calcValue));
+    } else {
+      setCalcValue(calcValue === "0" ? value : calcValue + value);
+    }
+  };
 
   let card = "";
   let btn = "";
@@ -56,34 +70,120 @@ const CalculateCard = () => {
   return (
     <>
       <div className={`background-result ${background}`}>
-        <h1 className={`result ${result}`}>399,981</h1>
+        <h1 className={`result ${result}`}>{calcValue}</h1>
       </div>
       <div className={`card ${card}`}>
         <div className="card__first-section">
-          <button className={`button card__btn ${btn}`}>7</button>
-          <button className={`button card__btn ${btn}`}>8</button>
-          <button className={`button card__btn ${btn}`}>9</button>
-          <button className={`button card__delete-btn ${deleteBtn}`}>
+          <button
+            className={`button card__btn ${btn}`}
+            onClick={() => handleButtonClick("7")}
+          >
+            7
+          </button>
+          <button
+            className={`button card__btn ${btn}`}
+            onClick={() => handleButtonClick("8")}
+          >
+            8
+          </button>
+          <button
+            className={`button card__btn ${btn}`}
+            onClick={() => handleButtonClick("9")}
+          >
+            9
+          </button>
+          <button
+            className={`button card__delete-btn ${deleteBtn}`}
+            onClick={() => handleButtonClick("DEL")}
+          >
             DEL
           </button>
-          <button className={`button card__btn ${btn}`}>4</button>
-          <button className={`button card__btn ${btn}`}>5</button>
-          <button className={`button card__btn ${btn}`}>6</button>
-          <button className={`button card__btn ${btn}`}>+</button>
-          <button className={`button card__btn ${btn}`}>1</button>
-          <button className={`button card__btn ${btn}`}>2</button>
-          <button className={`button card__btn ${btn}`}>3</button>
-          <button className={`button card__btn ${btn}`}>-</button>
-          <button className={`button card__btn ${btn}`}>.</button>
-          <button className={`button card__btn ${btn}`}>0</button>
-          <button className={`button card__btn ${btn}`}>/</button>
-          <button className={`button card__btn ${btn}`}>x</button>
+          <button
+            className={`button card__btn ${btn}`}
+            onClick={() => handleButtonClick("4")}
+          >
+            4
+          </button>
+          <button
+            className={`button card__btn ${btn}`}
+            onClick={() => handleButtonClick("5")}
+          >
+            5
+          </button>
+          <button
+            className={`button card__btn ${btn}`}
+            onClick={() => handleButtonClick("6")}
+          >
+            6
+          </button>
+          <button
+            className={`button card__btn ${btn}`}
+            onClick={() => handleButtonClick("+")}
+          >
+            +
+          </button>
+          <button
+            className={`button card__btn ${btn}`}
+            onClick={() => handleButtonClick("1")}
+          >
+            1
+          </button>
+          <button
+            className={`button card__btn ${btn}`}
+            onClick={() => handleButtonClick("2")}
+          >
+            2
+          </button>
+          <button
+            className={`button card__btn ${btn}`}
+            onClick={() => handleButtonClick("3")}
+          >
+            3
+          </button>
+          <button
+            className={`button card__btn ${btn}`}
+            onClick={() => handleButtonClick("-")}
+          >
+            -
+          </button>
+          <button
+            className={`button card__btn ${btn}`}
+            onClick={() => handleButtonClick(".")}
+          >
+            .
+          </button>
+          <button
+            className={`button card__btn ${btn}`}
+            onClick={() => handleButtonClick("0")}
+          >
+            0
+          </button>
+          <button
+            className={`button card__btn ${btn}`}
+            onClick={() => handleButtonClick("/")}
+          >
+            /
+          </button>
+          <button
+            className={`button card__btn ${btn}`}
+            onClick={() => handleButtonClick("*")}
+          >
+            x
+          </button>
         </div>
         <div className="card__second-section">
-          <button className={`button card__reset-btn ${resetBtn}`}>
+          <button
+            className={`button card__reset-btn ${resetBtn}`}
+            onClick={() => handleButtonClick("RESET")}
+          >
             RESET
           </button>
-          <button className={`button card__result-btn ${resultBtn}`}>=</button>
+          <button
+            className={`button card__result-btn ${resultBtn}`}
+            onClick={() => handleButtonClick("=")}
+          >
+            =
+          </button>
         </div>
       </div>
     </>
