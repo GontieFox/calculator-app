@@ -17,8 +17,8 @@ const CalculateCard = () => {
     } else if (value === "=") {
       setCalcValue(eval(calcValue));
     } else if (
-      ["+", "-", "/", "*"].includes(value) &&
-      ["+", "-", "/", "*"].includes(lastChar)
+      ["+", "-", "/", "*", "."].includes(value) &&
+      ["+", "-", "/", "*", "."].includes(lastChar)
     ) {
       setCalcValue(calcValue.slice(0, -1) + value);
     } else {
