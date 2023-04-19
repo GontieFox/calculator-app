@@ -8,12 +8,19 @@ const CalculateCard = () => {
   const [calcValue, setCalcValue] = useState("0");
 
   const handleButtonClick = (value: string) => {
+    const lastChar = calcValue.charAt(calcValue.length - 1);
+
     if (value === "DEL") {
       setCalcValue(calcValue.slice(0, -1));
     } else if (value === "RESET") {
       setCalcValue("0");
     } else if (value === "=") {
       setCalcValue(eval(calcValue));
+    } else if (
+      ["+", "-", "/", "*"].includes(value) &&
+      ["+", "-", "/", "*"].includes(lastChar)
+    ) {
+      setCalcValue(calcValue.slice(0, -1) + value);
     } else {
       setCalcValue(calcValue === "0" ? value : calcValue + value);
     }
