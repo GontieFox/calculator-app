@@ -1,7 +1,6 @@
 import { useSelector } from "react-redux";
 import CalculateCard from "../../components/calculateCard/CalculateCard";
 import Intro from "../../components/intro/Intro";
-import ResultCard from "../../components/resultCard/ResultCard";
 import "./index.css";
 import { RootState } from "../../redux/store";
 
@@ -24,7 +23,6 @@ const Home = () => {
   return (
     <div className={`background ${background}`}>
       <Intro />
-      <ResultCard />
       <CalculateCard />
     </div>
   );
