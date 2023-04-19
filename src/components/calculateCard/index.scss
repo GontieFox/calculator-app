@@ -7,6 +7,7 @@
     border-radius: 10px;
     position: relative;
     transition: all 0.2s ease-in;
+    text-align: right;
 
     &_first {
         background-color: $very-dark-desaturated-blue-screen;
@@ -24,6 +25,10 @@
 .result {
     font-size: 48px;
     position: absolute;
+    width: 440px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     right: 30px;
     top: 50%;
     transform: translate(0, -50%);
@@ -268,4 +273,9 @@
         }
     }
 
+    .result {
+        width: 90%;
+        right: 10px;
+        font-size: 40px;
+    }
 }
