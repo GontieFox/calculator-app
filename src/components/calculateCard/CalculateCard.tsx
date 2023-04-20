@@ -5,7 +5,7 @@ import "./index.css";
 
 const CalculateCard = () => {
   const theme = useSelector((state: RootState) => state.theme.theme);
-  const [calcValue, setCalcValue] = useState("0");
+  const [calcValue, setCalcValue] = useState("");
 
   const handleButtonClick = (value: string) => {
     const lastChar = calcValue.charAt(calcValue.length - 1);
@@ -13,7 +13,7 @@ const CalculateCard = () => {
     if (value === "DEL") {
       setCalcValue(calcValue.slice(0, -1));
     } else if (value === "RESET") {
-      setCalcValue("0");
+      setCalcValue("");
     } else if (value === "=") {
       const result = eval(calcValue);
       setCalcValue(result.toString());
@@ -23,7 +23,7 @@ const CalculateCard = () => {
     ) {
       setCalcValue(calcValue.slice(0, -1) + value);
     } else {
-      setCalcValue(calcValue === "0" ? value : calcValue + value);
+      setCalcValue(calcValue + value);
     }
   };
 
